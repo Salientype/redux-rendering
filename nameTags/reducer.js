@@ -9,5 +9,16 @@ const reducer = (state = initialState, action) => {
 
     // Add a Name Tag
 
-    return state;
+    switch (type) {
+        
+        case 'ADD_NAME':
+            
+            return [
+                ...state,
+                action.name
+            ]
+    
+        default:
+            return state;
+    }
 }
